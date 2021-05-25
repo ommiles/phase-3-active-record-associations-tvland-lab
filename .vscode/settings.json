@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "TV Land Lab",
+            "group": "TV Land Lab",
+            "database": "${workspaceFolder:phase-3-active-record-associations-tvland-lab}/config/database.yml"
+        }
+    ]
+}

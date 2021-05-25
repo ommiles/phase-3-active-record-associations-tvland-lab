@@ -5,9 +5,37 @@
 - Create and modify tables using Active Record migrations
 - Build associations between models using Active Record macros
 
-## Introduction
+## Introduction (Part 1)
 
-In this lab, we'll be working with a TV show domain model. We will have a show,
+In this lab, we'll be working with a TV show domain model. 
+
+`SHOW` 
+
+has_many characters
+
+has_many_actors through: characters
+
+`ACTOR` 
+
+has_many characters
+
+has_many shows through:characters
+
+`NETWORK` 
+
+has_many shows
+
+**Network model is already complete!!!**
+
+`CHARACTER` 
+
+belongs_to show
+
+belongs_to actor
+
+## Introduction (Part 2)
+
+We will have a show,
 network, and character model. They will be associated in the following way:
 
 - An actor has many characters and has many shows through characters.
@@ -29,7 +57,7 @@ Character, etc... the tricky thing here is that **you will not be able to pass
 all the tests for Actor until the migrations for other models are working**.
 
 This makes sense, and mirrors normal development of associations - you can't ask
-an Actor instance about what characters it has if there isn't characters table
+an Actor instance about what characters it has if there isn't a characters table
 or a model configured.
 
 ### Migrations
