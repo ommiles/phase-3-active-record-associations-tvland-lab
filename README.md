@@ -13,13 +13,13 @@ In this lab, we'll be working with a TV show domain model.
 
 has_many characters
 
-has_many_actors through: characters
+has_many :actors, through: characters
 
 `ACTOR` 
 
 has_many characters
 
-has_many shows through:characters
+has_many shows, through:characters
 
 `NETWORK` 
 
